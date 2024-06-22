@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "81172649372",
+    "firebase_url": "https://weatherstation-b6496-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "weatherstation-b6496",
+    "storage_bucket": "weatherstation-b6496.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81172649372:android:e81342b36c1ecbafc12459",
+        "android_client_info": {
+          "package_name": "com.example.fbtest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoL3bCdcyMUbX0f-fory5j742nMphOqgQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81172649372:android:f949e507041fe7b2c12459",
+        "android_client_info": {
+          "package_name": "com.example.licenta_aplicatiestatiemeteo_moticicavladflorin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoL3bCdcyMUbX0f-fory5j742nMphOqgQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

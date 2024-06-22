@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <View
+        android:id="@+id/back_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/overall_bg"
+        />
+
+    <com.example.licenta_aplicatiestatiemeteo_moticicavladflorin.RoundedImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/status_bg"
+        />
+
+    <TextView
+        android:id="@+id/textViewStatusVant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Status \nVant"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:translationX="60dp"
+        android:translationY="80dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewStatusPloaie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Status \nPloaie"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:translationX="290dp"
+        android:translationY="80dp"
+        />
+
+
+    <GridLayout
+        android:id="@+id/grid_view"
+        android:layout_width="370dp"
+        android:layout_height="540dp"
+        android:rowCount="3"
+        android:columnCount="2"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_below="@+id/top_view"
+        tools:ignore="ExtraText">
+
+
+        //1
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view1"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp"
+
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:width = "160dp"
+                android:height = "160dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/temperature"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:translationX="100dp"
+                    android:translationY="20dp"
+                    android:src="@drawable/tempicon"
+                    />
+
+                <ImageView
+                    android:id="@+id/humidity"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:translationX="100dp"
+                    android:translationY="35dp"
+                    android:src="@drawable/humicon"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewTemperaturaUmiditate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Temperatură &amp; Umiditate"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:translationY="55dp"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewTemp"
+                    android:layout_width="85dp"
+                    android:layout_height="50dp"
+                    android:translationX="20dp"
+                    android:translationY="-75dp"
+                    android:text="0.0 ℃"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    />
+
+
+                <TextView
+                    android:id="@+id/textViewHum"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:translationX="35dp"
+                    android:translationY="-70dp"
+                    android:text="0 %"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        //2
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp"
+
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/airquality"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:translationX="100dp"
+                    android:translationY="20dp"
+                    android:src="@drawable/airqualityicon"
+                    />
+
+                <ImageView
+                    android:id="@+id/particle"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:translationX="100dp"
+                    android:translationY="35dp"
+                    android:src="@drawable/particlesicon"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewCalitateParticule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calitate Aer &amp; Particule"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:translationY="55dp"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewGas"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:translationX="10dp"
+                    android:translationY="-73dp"
+                    android:text="0 ppm"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewParticle"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:translationX="10dp"
+                    android:translationY="-68dp"
+                    android:text="0 ppm"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        //3
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp"
+
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/wind"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:translationX="100dp"
+                    android:translationY="20dp"
+                    android:src="@drawable/windicon"
+                    />
+
+                <ImageView
+                    android:id="@+id/direction"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:translationX="100dp"
+                    android:translationY="35dp"
+                    android:src="@drawable/directionicon"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewVitezaDirectie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Viteză &amp; Direcție Vânt"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:translationY="55dp"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewSpeed"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:translationX="15dp"
+                    android:translationY="-73dp"
+                    android:text="0 m/s"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewDirection"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:translationX="35dp"
+                    android:translationY="-70dp"
+                    android:text="NW"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        //4
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp"
+
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/rain"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:translationX="100dp"
+                    android:translationY="20dp"
+                    android:src="@drawable/rainicon"
+                    />
+
+                <ImageView
+                    android:id="@+id/precipitation"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:translationX="100dp"
+                    android:translationY="35dp"
+                    android:src="@drawable/precipitationicon"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewPloaiePrecipitatii"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ploaie &amp; Tip Precipitații"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:translationY="55dp"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewRain"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:translationX="40dp"
+                    android:translationY="-74dp"
+                    android:text="0 %"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewPrecipitation"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:translationX="35dp"
+                    android:translationY="-67dp"
+                    android:text="Tip"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        //5
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view5"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp"
+
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/light"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:translationX="100dp"
+                    android:translationY="20dp"
+                    android:src="@drawable/lighticon"
+                    />
+
+                <ImageView
+                    android:id="@+id/uv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:translationX="100dp"
+                    android:translationY="35dp"
+                    android:src="@drawable/uvicon"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewLuminaUV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lumină &amp; UV"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:translationY="55dp"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewLight"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:translationX="10dp"
+                    android:translationY="-72dp"
+                    android:text="0 lux"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewUV"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:translationX="12dp"
+                    android:translationY="-70dp"
+                    android:text="Index 0"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        //6
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view6"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp"
+
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/pressuremmHG"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:translationX="100dp"
+                    android:translationY="20dp"
+                    android:src="@drawable/pressurehgicon"
+                    />
+
+                <ImageView
+                    android:id="@+id/pressurePa"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:translationX="100dp"
+                    android:translationY="35dp"
+                    android:src="@drawable/pressurepaicon"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewPresiuni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Presiune Atmosferică"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:translationY="55dp"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewMMHG"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:translationX="7dp"
+                    android:translationY="-70dp"
+                    android:text="0 mmHG"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewPA"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:translationX="7dp"
+                    android:translationY="-63dp"
+                    android:text="0 Pa"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/textViewDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dată &amp; Oră"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:translationY="-10dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        />
+
+    <Button
+        android:id="@+id/buttonRead"
+        android:soundEffectsEnabled="false"
+        android:visibility="gone"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:translationX="120dp"
+        android:translationY="95dp"
+        android:text="Actualizeaza Datele"
+        />
+
+    <Button
+        android:id="@+id/buttonHistory"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#87119C"
+        android:drawableTop="@drawable/graphicon"
+        android:drawablePadding="0dp"
+        android:gravity="center"
+        android:textColorLink="#FFFFFF"
+        android:translationY="730dp"
+        app:rippleColor="#A67DEF" />
+
+    <FrameLayout
+        android:id="@+id/chartContainer"
+        android:layout_width="match_parent"
+        android:layout_height="525dp"
+        android:layout_below="@id/buttonHistory"
+        android:translationY="145dp"
+        android:visibility="gone"
+        android:layout_marginTop="16dp">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white" />
+
+    </FrameLayout>
+
+</RelativeLayout>
