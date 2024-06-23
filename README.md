@@ -1,1 +1,1 @@
-# Partea de Aplicatie mobila
+# Partea de Android
