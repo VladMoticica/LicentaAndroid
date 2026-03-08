@@ -22,7 +22,7 @@ Libraries:
 - Jetpack Compose & Layout Editor: For the modern, responsive UI.  
 - Compatibility: Supports Android 7.0 (Nougat) and newer (API 24+).  
 
-##📂 Project Structure  
+## 📂 Project Structure  
 app/<br>  
  ├── src/main/java/.../<br>
  │  ├── MainActivity.kt<br>
