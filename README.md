@@ -35,14 +35,14 @@ app/
 └── AndroidManifest.xml                          # Permissions (Notifications, Hardware Accel)  
 
 app/<br>
- ├── src/main/java/...//<br>
- │  ├── MainActivity.kt/<br>
- │  └── Home.kt /<br>
+ ├── src/main/java/.../<br>
+ │  ├── MainActivity.kt<br>
+ │  └── Home.kt<br>
  ├── res/<br>
- │    ├── layout//<br>
+ │    ├── layout/<br>
  │    │  ├── activity_main.xml<br>
  │    │  └── activity_home.xml<br>
- │    └── drawable//<br>
+ │    └── drawable/<br>
  └── AndroidManifest.xml
 
 ## 📊 UI Logic: The Time Cycle
