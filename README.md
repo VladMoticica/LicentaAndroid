@@ -23,14 +23,14 @@ Libraries:
 - Compatibility: Supports Android 7.0 (Nougat) and newer (API 24+).  
 
 ## 📂 Project Structure  
-app/<br>  
+app/<br>
  ├── src/main/java/.../<br>
  │  ├── MainActivity.kt<br>
  │  └── Home.kt<br>
  ├── res/<br>
  │    ├── layout/<br>
- │    │  ├── activity_main.xml<br>
- │    │  └── activity_home.xml<br>
+ │     │  ├── activity_main.xml<br>
+ │     │ └── activity_home.xml<br>
  │    └── drawable/<br>
  └── AndroidManifest.xml
 
