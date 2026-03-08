@@ -34,6 +34,17 @@ app/
 │   └── drawable/                                # Custom weather icons and status backgrounds  
 └── AndroidManifest.xml                          # Permissions (Notifications, Hardware Accel)  
 
+app/<br>
+ ├── src/main/java/...//<br>
+ │  ├── MainActivity.kt/<br>
+ │  └── Home.kt /<br>
+ ├── res/<br>
+ │    ├── layout//<br>
+ │    │  ├── activity_main.xml<br>
+ │    │  └── activity_home.xml<br>
+ │    └── drawable//<br>
+ └── AndroidManifest.xml
+
 ## 📊 UI Logic: The Time Cycle
 The app divides the 24-hour cycle into five frames to enhance user experience:  
 | Phase       | Time Range      | UI Theme                        |  
