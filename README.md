@@ -29,8 +29,8 @@ app/<br>
  │  └── Home.kt<br>
  ├── res/<br>
  │    ├── layout/<br>
- │     │  ├── activity_main.xml<br>
- │     │ └── activity_home.xml<br>
+ │    │  ├── activity_main.xml<br>
+ │    │ └── activity_home.xml<br>
  │    └── drawable/<br>
  └── AndroidManifest.xml
 
